@@ -1,11 +1,11 @@
 #==========================================================================
 # パス
 #==========================================================================
+export PATH=/usr/local/bin:/sbin:$PATH
+
 if echo $HOST | grep -q 'sakura.ne.jp'; then
   export PATH=$HOME/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin
   export MAILCHECK=0
-else
-  export PATH=/usr/local/share/npm/bin:/usr/local/bin:/sbin:$PATH
 fi
 
 
