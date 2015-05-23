@@ -30,6 +30,8 @@ if [ -d $HOME/.zsh.d/ ]; then
   done
 fi
 
+# zsh syntax highlighting
+source $HOME/.zsh.d/plugin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #==========================================================================
 # プロンプト
