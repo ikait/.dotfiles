@@ -174,6 +174,9 @@ setopt extended_history
 # シェルのプロセスごとに履歴を共有
 setopt sharehistory
 
+# インクリメンタルからの検索
+bindkey "^R" history-incremental-search-backward
+bindkey "^S" history-incremental-search-forward
 
 #==========================================================================
 # 補完
