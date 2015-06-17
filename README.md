@@ -8,6 +8,7 @@ clone this repositry, and
 ```
 
 ## Uninstall
+
 ```zsh
 % make clean
 ```

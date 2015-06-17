@@ -13,4 +13,3 @@ if [ -e /usr/local/bin/rbenv -o -e /usr/bin/rbenv ]; then
   }
 
 fi
-

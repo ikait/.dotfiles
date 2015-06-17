@@ -3,11 +3,6 @@
 #==========================================================================
 export PATH=/usr/local/bin:/sbin:$PATH
 
-if echo $HOST | grep -q 'sakura.ne.jp'; then
-  export PATH=$HOME/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin
-  export MAILCHECK=0
-fi
-
 
 #==========================================================================
 # 言語
@@ -25,13 +20,14 @@ export TERM=xterm-256color
 # スクリプト / 追加の設定
 #==========================================================================
 if [ -d $HOME/.zsh.d/ ]; then
-  for file in $( ls $HOME/.zsh.d/{script,extend}/*.sh ); do
+  for file in $( ls $HOME/.zsh.d/{scripts,extends}/*.sh ); do
     source $file
   done
 fi
 
 # zsh syntax highlighting
-source $HOME/.zsh.d/plugin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh.d/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 #==========================================================================
 # プロンプト
