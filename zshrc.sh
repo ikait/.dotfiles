@@ -21,7 +21,7 @@ export TERM=xterm-256color
 #==========================================================================
 if [ -d $HOME/.zsh.d/ ]; then
   for file in $( ls $HOME/.zsh.d/{scripts,extends}/*.sh ); do
-    source $file
+    . $file
   done
 fi
 
@@ -171,8 +171,8 @@ setopt extended_history
 setopt sharehistory
 
 # インクリメンタルからの検索
-bindkey "^R" history-incremental-search-backward
-bindkey "^S" history-incremental-search-forward
+# bindkey "^R" history-incremental-search-backward
+# bindkey "^S" history-incremental-search-forward
 
 #==========================================================================
 # 補完
