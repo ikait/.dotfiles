@@ -4,7 +4,7 @@
 clone this repositry, and
 
 ```zsh
-% cd .zsh.d && git submodule init && git submodule update && make
+% cd .zsh.d && git submodule update --init && make
 ```
 
 ## Uninstall
