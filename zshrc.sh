@@ -27,6 +27,7 @@ fi
 
 # zsh syntax highlighting
 source $HOME/.zsh.d/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh.d/plugins/k/k.sh
 
 
 #==========================================================================
