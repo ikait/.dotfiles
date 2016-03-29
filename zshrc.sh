@@ -105,7 +105,7 @@ case ${UID} in
 	SPROMPT="${RESET}${RED}%r is correct? [n,y,a,e]:${RESET} "
 	;;
 *)  ## root 以外のとき
-	PROMPT=$'\n'"${host}: ${RED}%B%~%b${RESET}"$'\n'"%B%#%b "
+	PROMPT=$'\n'"[%*]${host}: ${RED}%B%~%b${RESET}"$'\n'"%B%#%b "
 	PROMPT2="${RESET}%B>%b "
 	SPROMPT="${RESET}%r is correct? [n,y,a,e]: "
 	;;
@@ -241,4 +241,3 @@ export LS_COLORS='di=01;36'
 
 # Ctrl+w で､直前の/までを削除する｡
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
-
