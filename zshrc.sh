@@ -20,7 +20,7 @@ export TERM=xterm-256color
 # スクリプト / 追加の設定
 #==========================================================================
 if [ -d $HOME/.zsh.d/ ]; then
-  for file in $( ls $HOME/.zsh.d/{scripts,extends}/*.sh ); do
+  for file in $( ls $HOME/.zsh.d/{functions,extends}/*.sh ); do
     . $file
   done
 fi
