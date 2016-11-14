@@ -7,6 +7,12 @@ clone this repositry, and
 % cd .zsh.d && git submodule update --init && make
 ```
 
+### For macOS
+
+```zsh
+% make mac
+```
+
 ## Uninstall
 
 ```zsh

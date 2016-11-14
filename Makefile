@@ -11,6 +11,9 @@ all: ~/.zshrc ~/.zsh_profile ~/.zsh.d
 ~/.zsh.d:
 	ln -s $(CURDIR)/ ~/.zsh.d
 
+mac:
+	$(CURDIR)/.macos
+
 clean:
 	if [ -L ~/.zshrc ]; then unlink ~/.zshrc ; fi
 	if [ -L ~/.zsh_profile ]; then unlink ~/.zsh_profile ; fi
