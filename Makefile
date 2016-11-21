@@ -12,7 +12,7 @@ all: ~/.zshrc ~/.zsh_profile ~/.zsh.d
 	ln -s $(CURDIR)/ ~/.zsh.d
 
 mac:
-	$(CURDIR)/.macos
+	$(CURDIR)/.macos && $(CURDIR)/.install_dotfiles
 
 clean:
 	if [ -L ~/.zshrc ]; then unlink ~/.zshrc ; fi

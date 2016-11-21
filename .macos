@@ -1,5 +1,22 @@
 #!/usr/bin/env bash
 
+echo "Install homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo "Install envs"
+brew install pyenv rbenv
+
+echo "Install utils"
+brew install mosh zsh fzf peco vim git
+
+echo "Use zsh as a default shell"
+echo "/usr/local/bin/zsh" | sudo tee /etc/shells
+chsh -s /usr/local/bin/zsh
+
+echo "Install fzf"
+/usr/local/opt/fzf/install --64 --key-bindings --completion --no-update-rc
+
+###############################################################################
 # ~/.macos — https://mths.be/macos
 
 # Close any open System Preferences panes, to prevent them from overriding
