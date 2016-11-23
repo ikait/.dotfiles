@@ -7,7 +7,7 @@ echo "Install envs"
 brew install pyenv rbenv
 
 echo "Install utils"
-brew install mosh zsh fzf peco vim git
+brew install mosh zsh fzf peco vim git tig
 
 echo "Use zsh as a default shell"
 echo "/usr/local/bin/zsh" | sudo tee /etc/shells
