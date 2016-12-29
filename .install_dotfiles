@@ -3,5 +3,5 @@ git clone https://github.com/ikait/.vim.git ~/.vim
 cd ~/.vim && make
 
 # tmux 
-https://github.com/ikait/.tmux.d.git ~/.tmux.d
+git clone https://github.com/ikait/.tmux.d.git ~/.tmux.d
 cd ~/.tmux.d && make
