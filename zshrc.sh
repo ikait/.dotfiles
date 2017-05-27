@@ -139,7 +139,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # tig
-alias tig='tig'
+alias tig='tig --all'
 
 # IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -148,6 +148,9 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# 色付きjq + less
+alias jqless="jq '.' -C | less -R"
 
 
 #==========================================================================
@@ -251,3 +254,4 @@ export LS_COLORS='di=01;36'
 
 # Ctrl+w で､直前の/までを削除する｡
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+eval $(/usr/libexec/path_helper -s)
