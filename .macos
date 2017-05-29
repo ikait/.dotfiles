@@ -3,8 +3,8 @@
 echo "Install homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Install envs"
-brew install pyenv rbenv
+echo "Install anyenv"
+git clone https://github.com/riywo/anyenv $HOME/.anyenv
 
 echo "Install utils"
 brew install mosh zsh fzf peco vim git tig
