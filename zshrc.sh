@@ -139,7 +139,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # tig
-alias tig='tig'
+alias tig='tig --all'
 
 # IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -148,6 +148,9 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# 色付きjq + less
+alias jqless="jq '.' -C | less -R"
 
 
 #==========================================================================
