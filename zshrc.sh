@@ -152,6 +152,9 @@ alias path='echo -e ${PATH//:/\\n}'
 # 色付きjq + less
 alias jqless="jq '.' -C | less -R"
 
+# typora
+# https://support.typora.io/Use-Typora-From-Shell-or-cmd/
+alias typora="open -a typora"
 
 #==========================================================================
 # コマンド履歴
