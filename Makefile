@@ -1,15 +1,18 @@
-all: .zshrc .zsh_profile .zsh.d hyper
+all: ~/.zshrc ~/.zsh_profile ~/.zsh.d ~/.vimrc ~/.hyper.js
 
-.zshrc:
+~/.zshrc:
 	ln -s $(CURDIR)/.zshrc ~/.zshrc
 
-.zsh_profile:
+~/.zsh_profile:
 	ln -s $(CURDIR)/.zsh_profile ~/.zsh_profile
 
-.zsh.d:
+~/.zsh.d:
 	ln -s $(CURDIR)/.zsh.d ~/.zsh.d
 
-hyper:
+~/.vimrc:
+	ln -s $(CURDIR)/.vimrc ~/.vimrc
+
+~/.hyper.js:
 	ln -s $(CURDIR)/.hyper.js ~/.hyper.js
 
 mac:
