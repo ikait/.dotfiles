@@ -1,15 +1,16 @@
-# ZSH_CONF_DIRECTORY = ~/.zsh.d
+all: zsh dotfiles hyper
 
-all: ~/.zshrc ~/.zsh_profile ~/.zsh.d
+zshrc:
+	ln -s $(CURDIR)/.zshrc ~/.zshrc
 
-~/.zshrc: 
-	ln -s $(CURDIR)/zshrc.sh ~/.zshrc
+zsh_profile:
+	ln -s $(CURDIR)/.zsh_profile ~/.zsh_profile
 
-~/.zsh_profile:
-	ln -s $(CURDIR)/zsh_profile.sh ~/.zsh_profile
+hyper:
+	ln -s $(CURDIR)/.hyper.js ~/.hyper.js
 
-~/.zsh.d:
-	ln -s $(CURDIR)/ ~/.zsh.d
+dotfiles:
+	ln -s $(CURDIR)/ ~/.dotfiles
 
 mac:
 	$(CURDIR)/.macos && $(CURDIR)/.install_dotfiles
@@ -17,4 +18,5 @@ mac:
 clean:
 	if [ -L ~/.zshrc ]; then unlink ~/.zshrc ; fi
 	if [ -L ~/.zsh_profile ]; then unlink ~/.zsh_profile ; fi
+	if [ -L ~/.hyper.js ]; then unlink ~/.hyper.js ; fi
 	if [ -L ~/.zsh.d ]; then unlink ~/.zsh.d ; fi
