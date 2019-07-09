@@ -1,10 +1,10 @@
-# .zsh.d
+# .dotfiles
 
 ## Install
 clone this repositry, and
 
 ```zsh
-% cd .zsh.d && git submodule update --init && make
+% cd .dotfiles && git submodule update --init && make
 ```
 
 ### For macOS
