@@ -100,12 +100,12 @@ fi
 
 case ${UID} in
 0)  ## root のとき
-	PROMPT=$'\n'"${host} "$'\n'"${RED}%B%#%b${RESET} "
+	PROMPT=$'\n'"${host}: ${RED}%B%~%b${RESET}"$'\n'"${RED}%B%#%b${RESET} "
 	PROMPT2="${RESET}${RED}%B%>%b${RESET} "
 	SPROMPT="${RESET}${RED}%r is correct? [n,y,a,e]:${RESET} "
 	;;
 *)  ## root 以外のとき
-	PROMPT=$'\n'"[%*]${host} "$'\n'"%B%#%b "
+	PROMPT=$'\n'"[%*]${host}: ${RED}%B%~%b${RESET}"$'\n'"%B%#%b "
 	PROMPT2="${RESET}%B>%b "
 	SPROMPT="${RESET}%r is correct? [n,y,a,e]: "
 	;;
