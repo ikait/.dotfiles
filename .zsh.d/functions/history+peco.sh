@@ -2,7 +2,7 @@
 # Search history using peco
 # http://qiita.com/kp_ohnishi/items/3009e2083831af3a7c5c
 #
-if which peco > /dev/null; then
+if which peco > /dev/null 2>&1; then
   function peco-select-history() {
       local tac
       if which tac > /dev/null; then
