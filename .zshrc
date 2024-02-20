@@ -20,7 +20,7 @@ export TERM=xterm-256color
 # スクリプト / 追加の設定
 #==========================================================================
 if [ -d $HOME/.zsh.d/ ]; then
-  for file in $( ls $HOME/.zsh.d/{functions,extends}/*.sh ); do
+  for file in $( ls $HOME/.zsh.d/{functions,extends}/*.sh | tail -r ); do
     . $file
   done
 fi
@@ -257,3 +257,9 @@ export LS_COLORS='di=01;36'
 
 # Ctrl+w で､直前の/までを削除する｡
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ikai/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ikai/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ikai/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ikai/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

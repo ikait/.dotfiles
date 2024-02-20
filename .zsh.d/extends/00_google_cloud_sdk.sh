@@ -8,3 +8,4 @@ if [ -f "$HOME/.google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/.goog
 if [ -e $HOME/.google-cloud-sdk/bin/gcloud ]; then
   export PATH="$HOME/.google-cloud-sdk/bin:$PATH"
 fi
+
