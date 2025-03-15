@@ -21,7 +21,6 @@ export TERM=xterm-256color
 #==========================================================================
 if [ -d $HOME/.zsh.d/ ]; then
   for file in $( ls $HOME/.zsh.d/{extends,functions}/*.sh ); do
-    echo $file
     . $file
   done
 fi
@@ -257,4 +256,3 @@ export LS_COLORS='di=01;36'
 
 # Ctrl+w で､直前の/までを削除する｡
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
-
