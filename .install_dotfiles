@@ -1,7 +1,0 @@
-# vim
-git clone https://github.com/ikait/.vim.git ~/.vim
-cd ~/.vim && make
-
-# tmux 
-git clone https://github.com/ikait/.tmux.d.git ~/.tmux.d
-cd ~/.tmux.d && make

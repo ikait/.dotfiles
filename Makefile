@@ -16,7 +16,7 @@ ghostty:
 	ln -s $(CURDIR)/.config/ghostty/config ~/.config/ghostty/config
 
 mac:
-	$(CURDIR)/.macos && $(CURDIR)/.install_dotfiles
+	$(CURDIR)/.macos
 
 clean:
 	if [ -L ~/.zshrc ]; then unlink ~/.zshrc ; fi
