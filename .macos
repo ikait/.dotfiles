@@ -9,13 +9,10 @@ mkdir -p $HOME/.anyenv/plugins
 git clone https://github.com/znz/anyenv-update.git $HOME/.anyenv/plugins/anyenv-update
 
 echo "Install utils"
-brew install mosh zsh fzf peco vim git tig
+brew install mosh zsh fzf vim git tig
 
 echo "Use zsh as a default shell"
-shell_path="/usr/local/bin/zsh"
-if [[ $(uname -m) == 'arm64' ]]; then
-	shell_path="/opt/homebrew/bin/zsh"
-fi
+shell_path="$(brew --prefix)/bin/zsh"
 echo "$shell_path" | sudo tee /etc/shells
 chsh -s "$shell_path"
 
