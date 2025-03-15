@@ -27,7 +27,6 @@ fi
 
 # zsh syntax highlighting
 source $HOME/.zsh.d/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.zsh.d/plugins/k/k.sh
 
 
 #==========================================================================
@@ -258,8 +257,3 @@ export LS_COLORS='di=01;36'
 # Ctrl+w で､直前の/までを削除する｡
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ikai/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ikai/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ikai/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ikai/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
