@@ -1,4 +1,4 @@
-all: zsh tmux vim hyper
+all: zsh tmux vim ghostty
 
 zsh:
 	ln -s $(CURDIR)/.zshrc ~/.zshrc
@@ -12,8 +12,8 @@ tmux:
 vim:
 	ln -s $(CURDIR)/.vimrc ~/.vimrc
 
-hyper:
-	ln -s $(CURDIR)/.hyper.js ~/.hyper.js
+ghostty:
+	ln -s $(CURDIR)/.config/ghostty/config ~/.config/ghostty/config
 
 mac:
 	$(CURDIR)/.macos && $(CURDIR)/.install_dotfiles
@@ -25,4 +25,4 @@ clean:
 	if [ -L ~/.tmux.conf ]; then unlink ~/.tmux.conf ; fi
 	if [ -L ~/.tmux.d ]; then unlink ~/.tmux.d ; fi
 	if [ -L ~/.vimrc ]; then unlink ~/.vimrc ; fi
-	if [ -L ~/.hyper.js ]; then unlink ~/.hyper.js ; fi
+	if [ -L ~/.config/ghostty/config ]; then unlink ~/.config/ghostty/config ; fi
