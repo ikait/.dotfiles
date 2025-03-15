@@ -16,8 +16,8 @@ if which peco > /dev/null 2>&1; then
       CURSOR=$#BUFFER
       zle clear-screen
   }
-#  zle -N peco-select-history
-#  bindkey '^R' peco-select-history
+  zle -N peco-select-history
+  bindkey '^R' peco-select-history
 else
   # if peco not found, use incremental-search zsh has
   bindkey '^R' history-incremental-search-backward
