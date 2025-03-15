@@ -1,9 +1,6 @@
 [submodule ".zsh.d/plugins/zsh-syntax-highlighting"]
 	path = .zsh.d/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".zsh.d/plugins/k"]
-	path = .zsh.d/plugins/k
-	url = https://github.com/rimraf/k.git
 [submodule ".tmux.d/plugins/tpm"]
 	path = .tmux.d/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
