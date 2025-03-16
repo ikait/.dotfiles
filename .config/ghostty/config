@@ -1,5 +1,10 @@
+term = xterm-256color
 theme = duskfox
 
 font-family = SF Mono
 font-family = Hiragino Sans
 font-size = 12
+
+font-feature = -calt
+font-feature = -dlig
+font-feature = -liga
