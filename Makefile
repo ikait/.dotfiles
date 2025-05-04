@@ -13,6 +13,7 @@ vim:
 	ln -s $(CURDIR)/.vimrc ~/.vimrc
 
 ghostty:
+	mkdir -p ~/.config/ghostty
 	ln -s $(CURDIR)/.config/ghostty/config ~/.config/ghostty/config
 
 mac:
