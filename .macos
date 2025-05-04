@@ -17,7 +17,8 @@ echo "$shell_path" | sudo tee /etc/shells
 chsh -s "$shell_path"
 
 echo "Install fzf"
-/usr/local/opt/fzf/install --64 --key-bindings --completion --no-update-rc
+
+$(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
 
 ###############################################################################
 # ~/.macos — https://mths.be/macos
