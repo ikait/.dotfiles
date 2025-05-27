@@ -6,6 +6,5 @@ if [ -f "$HOME/.google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/.goog
 
 # パス追加
 if [ -e $HOME/.google-cloud-sdk/bin/gcloud ]; then
-  export PATH="$HOME/.google-cloud-sdk/bin:$PATH"
+  export PATH="$PATH:$HOME/.google-cloud-sdk/bin"
 fi
-

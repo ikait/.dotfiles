@@ -1,5 +1,5 @@
 # パス追加
 if [ -e $HOME/.anyenv/bin/anyenv ]; then
-  export PATH="$HOME/.anyenv/bin:$PATH"
+  export PATH="$PATH:$HOME/.anyenv/bin"
   eval "$(anyenv init -)"
 fi
