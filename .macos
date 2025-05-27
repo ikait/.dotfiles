@@ -11,6 +11,8 @@ git clone https://github.com/znz/anyenv-update.git $HOME/.anyenv/plugins/anyenv-
 echo "Install utils"
 brew install mosh zsh fzf vim git tig
 
+brew install --cask google-japanese-ime google-chrome cursor visual-studio-code ghostty chatgpt slack orbstack raycast notion
+
 echo "Use zsh as a default shell"
 shell_path="$(brew --prefix)/bin/zsh"
 echo "$shell_path" | sudo tee /etc/shells
