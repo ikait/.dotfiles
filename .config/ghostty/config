@@ -8,3 +8,4 @@ font-size = 12
 font-feature = -calt
 font-feature = -dlig
 font-feature = -liga
+keybind = shift+enter=text:\n
