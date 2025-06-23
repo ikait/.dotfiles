@@ -1,9 +1,14 @@
 {
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
+  },
   "permissions": {
     "allow": [
       "Bash(ls:*)",
       "Bash(rg:*)",
+      "Bash(jq:*)",
       "Bash(grep:*)",
+      "Bash(find:*)",
       "Bash(gh issue view:*)",
       "Bash(gh pr view:*)",
       "Bash(gh pr diff:*)",
@@ -17,10 +22,9 @@
       "Bash(git merge:*)",
       "Bash(git reset:*)",
       "Bash(git squash:*)",
-      "Bash(git worktree:*)"
+      "Bash(git worktree:*)",
+      "Bash(claude --version)"
     ]
   },
-  "env": {
-    "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
-  }
+  "model": "opus"
 }
