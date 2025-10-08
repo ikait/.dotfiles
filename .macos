@@ -5,13 +5,33 @@ echo "Install homebrew"
 
 echo "Install anyenv"
 git clone https://github.com/riywo/anyenv $HOME/.anyenv
+
 mkdir -p $HOME/.anyenv/plugins
 git clone https://github.com/znz/anyenv-update.git $HOME/.anyenv/plugins/anyenv-update
 
-echo "Install utils"
+echo "Install commands"
 brew install mosh zsh fzf vim git tig
 
-brew install --cask google-japanese-ime google-chrome cursor visual-studio-code ghostty chatgpt slack orbstack raycast notion
+echo "Install apps"
+brew install --cask \
+	google-japanese-ime \
+	google-chrome \
+	slack \
+	chatgpt \
+	zoom \
+	onedrive \
+	microsoft-word \
+	microsoft-excel \
+	microsoft-powerpoint \
+	microsoft-outlook \
+	cursor \
+	visual-studio-code \
+	orbstack \
+	claude-code \
+	codex \
+	coteditor \
+	iterm2 \
+	font-sf-mono
 
 echo "Use zsh as a default shell"
 shell_path="$(brew --prefix)/bin/zsh"

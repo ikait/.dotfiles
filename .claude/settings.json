@@ -25,6 +25,5 @@
       "Bash(git worktree:*)",
       "Bash(claude --version)"
     ]
-  },
-  "model": "opus"
+  }
 }

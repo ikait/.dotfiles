@@ -1,0 +1,7 @@
+set main-view = id date author:maxwidth=16 commit-title:graph=yes,refs=yes
+
+set main-view-date = custom
+set main-view-date-format = "%Y-%m-%d %H:%M"
+set main-view-date-local = true
+
+set split-view-height = 80%

@@ -1,4 +1,4 @@
-all: zsh tmux vim ghostty claude
+all: zsh tmux vim tig claude
 
 zsh:
 	ln -s $(CURDIR)/.zshrc ~/.zshrc
@@ -12,9 +12,8 @@ tmux:
 vim:
 	ln -s $(CURDIR)/.vimrc ~/.vimrc
 
-ghostty:
-	mkdir -p ~/.config/ghostty
-	ln -s $(CURDIR)/.config/ghostty/config ~/.config/ghostty/config
+tig:
+	ln -s $(CURDIR)/.tigrc ~/.tigrc
 
 claude:
 	mkdir -p ~/.claude
@@ -30,5 +29,5 @@ clean:
 	if [ -L ~/.tmux.conf ]; then unlink ~/.tmux.conf ; fi
 	if [ -L ~/.tmux.d ]; then unlink ~/.tmux.d ; fi
 	if [ -L ~/.vimrc ]; then unlink ~/.vimrc ; fi
-	if [ -L ~/.config/ghostty/config ]; then unlink ~/.config/ghostty/config ; fi
+	if [ -L ~/.tigrc ]; then unlink ~/.tigrc ; fi
 	if [ -L ~/.claude/settings.json ]; then unlink ~/.claude/settings.json ; fi
