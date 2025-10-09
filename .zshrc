@@ -256,3 +256,11 @@ export LS_COLORS='di=01;36'
 
 # Ctrl+w で､直前の/までを削除する｡
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ikai/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ikai/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ikai/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ikai/google-cloud-sdk/completion.zsh.inc'; fi

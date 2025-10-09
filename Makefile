@@ -18,6 +18,7 @@ tig:
 claude:
 	mkdir -p ~/.claude
 	ln -s $(CURDIR)/.claude/settings.json ~/.claude/settings.json
+	ln -s $(CURDIR)/.claude/statusline.js ~/.claude/statusline.js
 
 mac:
 	$(CURDIR)/.macos

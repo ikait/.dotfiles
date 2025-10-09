@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "env": {
     "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
   },
@@ -14,6 +15,8 @@
       "Bash(gh pr diff:*)",
       "Bash(gh pr checks:*)",
       "Bash(gh pr checkout:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh run view:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git checkout:*)",
@@ -23,7 +26,34 @@
       "Bash(git reset:*)",
       "Bash(git squash:*)",
       "Bash(git worktree:*)",
-      "Bash(claude --version)"
+      "Bash(claude --version)",
+      "Bash(gemini:*)",
+      "Bash(mkdir:*)",
+      "Bash(make:*)",
+      "Bash(go mod:*)",
+      "Bash(go get:*)",
+      "Bash(go test:*)",
+      "Bash(go fmt:*)",
+      "Bash(go run:*)",
+      "Bash(gofmt:*)",
+      "mcp__serena__find_symbol",
+      "mcp__serena__get_symbols_overview",
+      "mcp__serena__replace_symbol_body",
+      "mcp__serena__search_for_pattern",
+      "mcp__serena__check_onboarding_performed",
+      "mcp__serena__list_dir",
+      "mcp__serena__find_file",
+      "mcp__serena__onboarding",
+      "mcp__serena__write_memory"
     ]
+  },
+  "model": "sonnet[1m]",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.js"
+  },
+  "alwaysThinkingEnabled": true,
+  "feedbackSurveyState": {
+    "lastShownTime": 1754053787559
   }
 }
