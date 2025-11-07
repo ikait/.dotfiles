@@ -1,6 +1,5 @@
 # bun completions
-if [ -s "$HOME/.bun/_bun" ]; then
-  source "$HOME/.bun/_bun"
+if [ -d "$HOME/.bun" ]; then
   export BUN_INSTALL="$HOME/.bun"
   export PATH="$PATH:$BUN_INSTALL/bin"
 fi
