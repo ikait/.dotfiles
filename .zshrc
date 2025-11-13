@@ -241,7 +241,7 @@ function chpwd() {
 
 # コマンド後に現在位置を表示
 function precmd() {
-  print -Pn "\e]2; %n@%m %~\a"
+  echo -ne "\e]1;${PWD##*/}\a"
 }
 
 # ディレクトリ名だけで､ディレクトリの移動をする
