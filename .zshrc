@@ -7,7 +7,18 @@ export PATH=/usr/local/bin:/sbin:$PATH
 #==========================================================================
 # 言語
 #==========================================================================
-export LANG=ja_JP.UTF-8
+case "$(uname -s)" in
+  Darwin)
+    # macOS. macOS hasn't ja_JP so that we fall
+    export LANG=en_US.UTF-8
+    unset LC_ALL
+    ;;
+  Linux)
+    # Linux
+    export LANG=ja_JP.UTF-8
+    unset LC_ALL
+    ;;
+esac
 
 
 #==========================================================================
