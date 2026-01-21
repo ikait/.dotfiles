@@ -28,11 +28,11 @@ define link_files
 			continue; \
 		fi; \
 		mkdir -p "$$(dirname "$$dest")"; \
-		ln -sf "$(CURDIR)/$$f" "$$dest"; \
+		ln -sfn "$(CURDIR)/$$f" "$$dest"; \
 	done
 endef
 
-all: zsh tmux vim tig claude codex
+all: zsh tmux vim tig claude codex ghostty
 
 zsh:
 	$(call link_files,$(LINK_ZSH))
