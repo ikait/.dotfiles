@@ -1,42 +1,64 @@
+HOME_DIR := $(HOME)
+
+LINK_ZSH := \
+	.zshrc \
+	.zsh_profile \
+	.zsh.d
+LINK_TMUX := \
+	.tmux.conf \
+	.tmux.d
+LINK_VIM := .vimrc
+LINK_TIG := .tigrc
+LINK_CLAUDE := \
+	.claude/settings.json \
+	.claude/statusline.js
+LINK_CODEX := \
+	.codex/AGENTS.md \
+	.codex/rules/git.rules
+LINK_GHOSTTY := .config/ghostty/config
+
+ALL_LINKS := $(LINK_ZSH) $(LINK_TMUX) $(LINK_VIM) $(LINK_TIG) \
+	$(LINK_CLAUDE) $(LINK_CODEX) $(LINK_GHOSTTY)
+
+define link_files
+	for f in $1; do \
+		dest="$(HOME_DIR)/$$f"; \
+		if [ -d "$$dest" ] && [ ! -L "$$dest" ]; then \
+			echo "skip: $$dest is a directory"; \
+			continue; \
+		fi; \
+		mkdir -p "$$(dirname "$$dest")"; \
+		ln -sf "$(CURDIR)/$$f" "$$dest"; \
+	done
+endef
+
 all: zsh tmux vim tig claude codex
 
 zsh:
-	ln -s $(CURDIR)/.zshrc ~/.zshrc
-	ln -s $(CURDIR)/.zsh_profile ~/.zsh_profile
-	ln -s $(CURDIR)/.zsh.d ~/.zsh.d
+	$(call link_files,$(LINK_ZSH))
 
 tmux:
-	ln -s $(CURDIR)/.tmux.conf ~/.tmux.conf
-	ln -s $(CURDIR)/.tmux.d ~/.tmux.d
+	$(call link_files,$(LINK_TMUX))
 
 vim:
-	ln -s $(CURDIR)/.vimrc ~/.vimrc
+	$(call link_files,$(LINK_VIM))
 
 tig:
-	ln -s $(CURDIR)/.tigrc ~/.tigrc
+	$(call link_files,$(LINK_TIG))
 
 claude:
-	mkdir -p ~/.claude
-	ln -s $(CURDIR)/.claude/settings.json ~/.claude/settings.json
-	ln -s $(CURDIR)/.claude/statusline.js ~/.claude/statusline.js
+	$(call link_files,$(LINK_CLAUDE))
 
 codex:
-	mkdir -p ~/.codex/rules
-	ln -s $(CURDIR)/.codex/AGENTS.md ~/.codex/AGENTS.md
-	ln -s $(CURDIR)/.codex/rules/git.rules ~/.codex/rules/git.rules
+	$(call link_files,$(LINK_CODEX))
+
+ghostty:
+	$(call link_files,$(LINK_GHOSTTY))
 
 mac:
 	$(CURDIR)/.macos
 
 clean:
-	if [ -L ~/.zshrc ]; then unlink ~/.zshrc ; fi
-	if [ -L ~/.zsh_profile ]; then unlink ~/.zsh_profile ; fi
-	if [ -L ~/.zsh.d ]; then unlink ~/.zsh.d ; fi
-	if [ -L ~/.tmux.conf ]; then unlink ~/.tmux.conf ; fi
-	if [ -L ~/.tmux.d ]; then unlink ~/.tmux.d ; fi
-	if [ -L ~/.vimrc ]; then unlink ~/.vimrc ; fi
-	if [ -L ~/.tigrc ]; then unlink ~/.tigrc ; fi
-	if [ -L ~/.claude/settings.json ]; then unlink ~/.claude/settings.json ; fi
-	if [ -L ~/.claude/statusline.js ]; then unlink ~/.claude/statusline.js ; fi
-	if [ -L ~/.codex/AGENTS.md ]; then unlink ~/.codex/AGENTS.md ; fi
-	if [ -L ~/.codex/rules/git.rules ]; then unlink ~/.codex/rules/git.rules ; fi
+	for f in $(ALL_LINKS); do \
+		if [ -L "$(HOME_DIR)/$$f" ]; then unlink "$(HOME_DIR)/$$f"; fi; \
+	done
