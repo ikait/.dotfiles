@@ -2,10 +2,10 @@ prefix_rule(
     pattern = ["git", ["add", "commit", "fetch", "pull", "status"]],
     decision = "allow",  # allow | prompt | forbidden
     match = [
-        ["git", "add", "."]
-        ["git", "commit", "-m", "message"]
-        ["git", "fetch"]
-        ["git", "pull"]
+        ["git", "add", "."],
+        ["git", "commit", "-m", "message"],
+        ["git", "fetch"],
+        ["git", "pull"],
         ["git", "status"]
     ],
     not_match = [["git", "push", "origin", "main"]],
