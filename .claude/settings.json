@@ -49,7 +49,7 @@
       "mcp__context7__get-library-docs"
     ]
   },
-  "model": "sonnet[1m]",
+  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.js"
@@ -57,5 +57,6 @@
   "alwaysThinkingEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754053787559
-  }
+  },
+  "language": "日本語"
 }
