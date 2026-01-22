@@ -9,3 +9,8 @@ font-feature = -dlig
 font-feature = -liga
 keybind = shift+enter=text:\n
 font-thicken = true
+
+# For switching tabs on Mac with JIS Keyboard
+keybind = super+shift+bracket_right=unbind
+keybind = super+shift+[=previous_tab
+keybind = super+]=goto_split:next
