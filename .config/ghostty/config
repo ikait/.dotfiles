@@ -14,3 +14,5 @@ font-thicken = true
 keybind = super+shift+bracket_right=unbind
 keybind = super+shift+[=previous_tab
 keybind = super+]=goto_split:next
+
+macos-titlebar-style = tabs
