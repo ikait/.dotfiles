@@ -17,6 +17,7 @@ brew install --cask \
 	google-japanese-ime \
 	google-chrome \
 	slack \
+	discord \
 	chatgpt \
 	zoom \
 	cursor \
