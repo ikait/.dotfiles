@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+echo "Install apps"
+brew install --cask \
+    onedrive \
+    microsoft-word \
+    microsoft-excel \
+    microsoft-powerpoint \
+    microsoft-outlook \
+    microsoft-teams

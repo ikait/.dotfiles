@@ -19,19 +19,24 @@ brew install --cask \
 	slack \
 	chatgpt \
 	zoom \
-	onedrive \
-	microsoft-word \
-	microsoft-excel \
-	microsoft-powerpoint \
-	microsoft-outlook \
 	cursor \
 	visual-studio-code \
 	orbstack \
 	claude-code \
 	codex \
 	coteditor \
-	iterm2 \
-	font-sf-mono
+	ghostty \
+	1password \
+	font-sf-mono \
+	tailscale-app # tailscale-app requires a kernel extension to work.
+			      # If the installation fails, retry after you enable it in:
+		          # System Settings → Privacy & Security
+	# onedrive \
+	# microsoft-word \
+	# microsoft-excel \
+	# microsoft-powerpoint \
+	# microsoft-outlook \
+	# microsoft-teams
 
 echo "Use zsh as a default shell"
 shell_path="$(brew --prefix)/bin/zsh"
