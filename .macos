@@ -12,6 +12,9 @@ git clone https://github.com/znz/anyenv-update.git $HOME/.anyenv/plugins/anyenv-
 echo "Install commands"
 brew install mosh zsh fzf vim git tig
 
+# Install Rosetta for Apple Silicon to install google-japanese-ime
+sudo softwareupdate --install-rosetta
+
 echo "Install apps"
 brew install --cask \
 	google-japanese-ime \
