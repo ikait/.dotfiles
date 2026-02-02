@@ -57,6 +57,7 @@ ghostty:
 
 mac:
 	$(CURDIR)/.macos
+	$(CURDIR)/.macos-apps
 
 clean:
 	for f in $(ALL_LINKS); do \

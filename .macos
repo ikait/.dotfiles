@@ -1,50 +1,4 @@
 #!/usr/bin/env bash
-
-echo "Install homebrew"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-echo "Install anyenv"
-git clone https://github.com/riywo/anyenv $HOME/.anyenv
-
-mkdir -p $HOME/.anyenv/plugins
-git clone https://github.com/znz/anyenv-update.git $HOME/.anyenv/plugins/anyenv-update
-
-echo "Install commands"
-brew install mosh zsh fzf vim git tig
-
-# Install Rosetta for Apple Silicon to install google-japanese-ime
-sudo softwareupdate --install-rosetta
-
-echo "Install apps"
-brew install --cask \
-	google-japanese-ime \
-	google-chrome \
-	slack \
-	discord \
-	chatgpt \
-	zoom \
-	cursor \
-	visual-studio-code \
-	orbstack \
-	claude-code \
-	codex \
-	coteditor \
-	ghostty \
-	1password \
-	font-sf-mono \
-	tailscale-app # tailscale-app requires a kernel extension to work.
-			      # If the installation fails, retry after you enable it in:
-		          # System Settings → Privacy & Security
-
-echo "Use zsh as a default shell"
-shell_path="$(brew --prefix)/bin/zsh"
-echo "$shell_path" | sudo tee /etc/shells
-chsh -s "$shell_path"
-
-echo "Install fzf"
-
-$(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
-
 ###############################################################################
 # ~/.macos — https://mths.be/macos
 
@@ -231,6 +185,15 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
+# Increase mouse and trackpad sensitivity
+defaults write -g com.apple.mouse.scaling -int 3
+
+# Increase trackpad and scrollwheel sensitivity
+defaults write -g com.apple.trackpad.scaling -float 1.7
+
+# Increase scrollwheel sensitivity
+defaults write -g com.apple.scrollwheel.scaling -int 3
+
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
@@ -265,8 +228,8 @@ defaults write com.apple.screencapture type -string "png"
 # Disable shadow in screenshots
 #defaults write com.apple.screencapture disable-shadow -bool true
 
-# Enable subpixel font rendering on non-Apple LCDs
-defaults write NSGlobalDomain AppleFontSmoothing -int 1
+# Disable subpixel font rendering on non-Apple LCDs
+defaults write NSGlobalDomain AppleFontSmoothing -int 0
 
 # Enable HiDPI display modes (requires restart)
 #sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
@@ -435,7 +398,7 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
-defaults write com.apple.dock mru-spaces -bool false
+# defaults write com.apple.dock mru-spaces -bool false
 
 # Remove the auto-hiding Dock delay
 #defaults write com.apple.dock autohide-delay -float 0
@@ -617,7 +580,7 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 1;"name" = "DIRECTORIES";}' \
 	'{"enabled" = 1;"name" = "PDF";}' \
 	'{"enabled" = 1;"name" = "FONTS";}' \
-	'{"enabled" = 0;"name" = "DOCUMENTS";}' \
+	'{"enabled" = 1;"name" = "DOCUMENTS";}' \
 	'{"enabled" = 0;"name" = "MESSAGES";}' \
 	'{"enabled" = 0;"name" = "CONTACT";}' \
 	'{"enabled" = 0;"name" = "EVENT_TODO";}' \
@@ -625,8 +588,8 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 0;"name" = "BOOKMARKS";}' \
 	'{"enabled" = 0;"name" = "MUSIC";}' \
 	'{"enabled" = 0;"name" = "MOVIES";}' \
-	'{"enabled" = 0;"name" = "PRESENTATIONS";}' \
-	'{"enabled" = 0;"name" = "SPREADSHEETS";}' \
+	'{"enabled" = 1;"name" = "PRESENTATIONS";}' \
+	'{"enabled" = 1;"name" = "SPREADSHEETS";}' \
 	'{"enabled" = 0;"name" = "SOURCE";}' \
 	'{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
 	'{"enabled" = 0;"name" = "MENU_OTHER";}' \

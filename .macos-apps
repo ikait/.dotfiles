@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+#==========================================================================
+# Homebrew
+#==========================================================================
+echo "Install homebrew"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+echo "Install anyenv"
+git clone https://github.com/riywo/anyenv $HOME/.anyenv
+
+mkdir -p $HOME/.anyenv/plugins
+git clone https://github.com/znz/anyenv-update.git $HOME/.anyenv/plugins/anyenv-update
+
+echo "Install commands"
+brew install mosh zsh fzf vim git tig
+
+# Install Rosetta for Apple Silicon to install google-japanese-ime
+sudo softwareupdate --install-rosetta
+
+echo "Install apps"
+brew install --cask \
+	google-japanese-ime \
+	google-chrome \
+	slack \
+	discord \
+	chatgpt \
+	zoom \
+	cursor \
+	visual-studio-code \
+	orbstack \
+	claude-code \
+	codex \
+	coteditor \
+	ghostty \
+	1password \
+	font-sf-mono \
+	tailscale-app # tailscale-app requires a kernel extension to work.
+			      # If the installation fails, retry after you enable it in:
+		          # System Settings → Privacy & Security
+
+echo "Use zsh as a default shell"
+shell_path="$(brew --prefix)/bin/zsh"
+echo "$shell_path" | sudo tee /etc/shells
+chsh -s "$shell_path"
+
+echo "Install fzf"
+
+$(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
