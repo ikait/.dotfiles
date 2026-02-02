@@ -2,6 +2,7 @@ HOME_DIR := $(HOME)
 
 LINK_ZSH := \
 	.zshrc \
+	.zshenv \
 	.zsh_profile \
 	.zsh.d
 LINK_TMUX := \
