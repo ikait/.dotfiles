@@ -1,20 +1,27 @@
 # .dotfiles
 
 ## Install
-clone this repositry, and
 
 ```zsh
-% cd .dotfiles && git submodule update --init && make
-```
+# If macOS, install Xcode Command Line Tools (ignore if already installed)
+xcode-select --install || true
 
-### For macOS
+# Clone repo + submodules
+git clone --depth 1 --recurse-submodules https://github.com/ikait/.dotfiles.git ~/.dotfiles
 
-```zsh
-% make mac
+# Move into repo
+cd ~/.dotfiles
+
+# Create symlinks for config files
+make all
+
+# If macOS, Apply macOS settings (omit if not needed)
+make mac
 ```
 
 ## Uninstall
 
 ```zsh
-% make clean
+cd ~/.dotfiles  # Move into repo
+make clean  # Remove created symlinks
 ```
