@@ -35,12 +35,6 @@ brew install --cask \
 	tailscale-app # tailscale-app requires a kernel extension to work.
 			      # If the installation fails, retry after you enable it in:
 		          # System Settings → Privacy & Security
-	# onedrive \
-	# microsoft-word \
-	# microsoft-excel \
-	# microsoft-powerpoint \
-	# microsoft-outlook \
-	# microsoft-teams
 
 echo "Use zsh as a default shell"
 shell_path="$(brew --prefix)/bin/zsh"
