@@ -12,7 +12,8 @@ mkdir -p $HOME/.anyenv/plugins
 git clone https://github.com/znz/anyenv-update.git $HOME/.anyenv/plugins/anyenv-update
 
 echo "Install commands"
-brew install mosh gh zsh fzf vim git tig tmux
+brew install gh zsh fzf vim git tig tmux
+brew install MisterTea/et/et
 
 # Install Rosetta for Apple Silicon to install google-japanese-ime
 sudo softwareupdate --install-rosetta
