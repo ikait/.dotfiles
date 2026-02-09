@@ -49,14 +49,14 @@
       "mcp__context7__get-library-docs"
     ]
   },
-  "model": "opus",
+  "model": "opus[1m]",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.js"
   },
+  "language": "日本語",
   "alwaysThinkingEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754053787559
-  },
-  "language": "日本語"
+  }
 }
