@@ -1,0 +1,4 @@
+interface:
+  display_name: "New Worktree"
+  short_description: "Create and manage git worktrees with gwm"
+  default_prompt: "Use $new-worktree to create a gwm worktree and carry out coding or PR review tasks."

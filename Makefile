@@ -15,7 +15,8 @@ LINK_CLAUDE := \
 	.claude/statusline.js
 LINK_CODEX := \
 	.codex/AGENTS.md \
-	.codex/rules/git.rules
+	.codex/rules/git.rules \
+	.codex/skills
 LINK_GHOSTTY := .config/ghostty/config
 
 ALL_LINKS := $(LINK_ZSH) $(LINK_TMUX) $(LINK_VIM) $(LINK_TIG) \
