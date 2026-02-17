@@ -2,6 +2,7 @@ term = xterm-256color
 theme = duskfox
 
 font-family = SF Mono
+font-family = "Hiragino Kaku Gothic ProN"
 font-size = 12
 
 font-feature = -calt

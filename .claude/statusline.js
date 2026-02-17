@@ -5,7 +5,7 @@ const path = require('path');
 const readline = require('readline');
 
 // Constants
-const COMPACTION_THRESHOLD = 200000 * 0.8
+const COMPACTION_THRESHOLD = 1000000 * 0.8
 
 // Read JSON from stdin
 let input = '';
