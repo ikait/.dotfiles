@@ -77,5 +77,7 @@
   "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754053787559
-  }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "cleanupPeriodDays": 3650
 }
