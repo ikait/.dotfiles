@@ -46,16 +46,35 @@
       "mcp__serena__onboarding",
       "mcp__serena__write_memory",
       "mcp__context7__resolve-library-id",
-      "mcp__context7__get-library-docs"
-    ]
+      "mcp__context7__get-library-docs",
+      "Bash(tree:*)",
+      "WebSearch",
+      "Bash(bun run test:*)",
+      "Bash(cat:*)",
+      "Bash(bun list:*)",
+      "Bash(bun update:*)",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_console_messages",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_resize"
+    ],
+    "defaultMode": "default"
   },
   "model": "opus[1m]",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.js"
   },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
+  },
   "language": "日本語",
   "alwaysThinkingEnabled": true,
+  "effortLevel": "medium",
+  "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754053787559
   }

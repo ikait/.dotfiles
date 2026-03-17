@@ -1,3 +1,5 @@
+prefix_rule(pattern=["git", "add"], decision="allow")
+
 prefix_rule(
     pattern = ["git", ["add", "commit", "fetch", "pull", "status"]],
     decision = "allow",  # allow | prompt | forbidden
